@@ -3,14 +3,12 @@ import java.util.Scanner;
 
 public class SchereSteinPapier {
 
-
     //avoid magic numbers
     private static final int SHEARS = 0;
     private static final int STONE = 1;
     private static final int PAPER = 2;
     private static final int GAMEEND = 3;
 
-    
     private static int counter = 0;
     private static int playerScore = 0;
     private static int compScore = 0;
@@ -35,7 +33,6 @@ public class SchereSteinPapier {
     private static int gameMenu(Scanner scanner) {
         System.out.println("\nWähle aus:");
         System.out.println(SHEARS + " = Schere, " + STONE + " = Stein, " + PAPER + " = Papier " + GAMEEND + " = Beenden");
-
         int set = -1;
 
         while (true) {
@@ -52,12 +49,10 @@ public class SchereSteinPapier {
             }
         }
         return set;
-
     }
 
     private static void gameLogic(int playerObj) {
         int compObj = randomObject();
-
         System.out.println("Wahl des Computers: " + showSelectedObject(compObj));
 
         if (playerObj == compObj) {
