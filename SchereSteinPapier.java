@@ -3,11 +3,14 @@ import java.util.Scanner;
 
 public class SchereSteinPapier {
 
+
+    //avoid magic numbers
     private static final int SHEARS = 0;
     private static final int STONE = 1;
     private static final int PAPER = 2;
     private static final int GAMEEND = 3;
 
+    
     private static int counter = 0;
     private static int playerScore = 0;
     private static int compScore = 0;
@@ -21,6 +24,7 @@ public class SchereSteinPapier {
 
                 System.out.println("Deine Wahl: " + showSelectedObject(menuSet));
                 gameLogic(menuSet);
+                counter++;
             }
 
             System.out.println("Spiel wurde beendet.\n");
@@ -58,6 +62,7 @@ public class SchereSteinPapier {
 
         if (playerObj == compObj) {
             System.out.println("\nUentschieden");
+
         } else if ((playerObj == SHEARS && compObj == PAPER) ||
                 (playerObj == STONE && compObj == SHEARS) ||
                 (playerObj == PAPER && compObj == STONE)) {
@@ -95,7 +100,6 @@ public class SchereSteinPapier {
     }
 
     private static void finalWin() {
-
         if (playerScore == compScore) {
             System.out.println("Es wurde ein Unentschieden in der Gesamtwertung erreicht.");
         } else if (playerScore > compScore) {
@@ -105,6 +109,6 @@ public class SchereSteinPapier {
         }
 
         System.out.println("Gesamtscore: Spieler: " + playerScore + " Computer: " + compScore + " Punkten");
-        System.out.println("Du hast den Computer insgesamt " + counter + " mal herrausgefordert.");
+        System.out.println("\nDu hast den Computer insgesamt " + counter + " mal herrausgefordert.");
     }
 }
