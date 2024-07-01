@@ -29,6 +29,8 @@ This project is part of a bootcamp that I am attending as part of a professional
 - The user's choice and the computer's random choice are displayed.
 - The result of the round is determined based on the rules of the game and displayed.
 - The game runs in a loop until the user decides to end the game (input 3).
+- The overall result is displayed after each round.
+- Ater a series of 3 winns, the winner take one point plus.
 
 #### 5. special
 
